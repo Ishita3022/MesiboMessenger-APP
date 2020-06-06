@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customfontdemo="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardUseCompatPadding="true"
+        android:layout_margin="@dimen/_10sdp"
+        customfontdemo:cardBackgroundColor="@color/colorWhite"
+        customfontdemo:cardCornerRadius="@dimen/_2sdp"
+        customfontdemo:cardElevation="@dimen/_1sdp">
+
+        <LinearLayout
+            android:id="@+id/msg_settingLayout"
+            android:layout_width="406dp"
+            android:layout_height="706dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:orientation="vertical"
+            android:padding="0dp"
+            android:visibility="visible">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="serif"
+                android:gravity="center_horizontal"
+                android:text="@string/messaging"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/cardview_light_background"
+                android:textStyle="normal"
+                android:typeface="normal"
+                customfontdemo:ignore="PrivateResource" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/keypad_color" />
+
+
+            <LinearLayout
+                android:id="@+id/blockedLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/blockedContactTV"
+                    android:layout_width="400dp"
+                    android:layout_height="67dp"
+
+                    android:gravity="start"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="@string/blocked_users_0"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="@color/callLogsBackground"
+                    android:textStyle="normal"
+                    android:paddingStart="@dimen/_10sdp"
+                    customfontdemo:ignore="RtlSymmetry" />
+
+                <TextView
+                    android:layout_width="416dp"
+                    android:layout_height="60dp"
+                    android:gravity="start"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="@string/list_of_blocked_users"
+                    android:textAlignment="textStart"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="@color/keypad_color"
+                    android:textStyle="normal"
+                    customfontdemo:ignore="RtlSymmetry" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/blockedRecyclerList"
+                    android:layout_width="349dp"
+                    android:layout_height="182dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/white"
+                    android:scrollbars="vertical" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:background="@color/grey" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
